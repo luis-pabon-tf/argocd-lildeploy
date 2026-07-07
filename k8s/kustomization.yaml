@@ -3,11 +3,11 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-# Argo CD Image Updater rewrites newTag here (git write-back) whenever a new
-# image lands in ghcr.io; Argo CD then syncs the change like any other commit.
+# First entry maps the bare image name to the registry; the second is owned by
+# Argo CD Image Updater (git write-back), which bumps newTag when a new image
+# lands in ghcr.io. Argo CD then syncs the change like any other commit.
 images:
   - name: lildeploy
     newName: ghcr.io/luis-pabon-tf/argocd-lildeploy
-    newTag: "0.1.1"
   - name: ghcr.io/luis-pabon-tf/argocd-lildeploy
     newTag: 0.1.2
