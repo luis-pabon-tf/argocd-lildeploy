@@ -3,6 +3,7 @@ name: build-image
 # paths filter is load-bearing: Image Updater's write-back commits touch only
 # k8s/, so they must not trigger a rebuild (infinite build loop otherwise).
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
