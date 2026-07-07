@@ -1,0 +1,9 @@
+[project]
+name = "argocd-lildeploy"
+version = "0.1.0"
+description = "Minimal FastAPI app for evaluating Argo CD"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+]
