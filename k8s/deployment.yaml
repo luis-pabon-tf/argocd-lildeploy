@@ -16,9 +16,8 @@ spec:
     spec:
       containers:
         - name: lildeploy
-          # Image is sideloaded into kind via `kind load docker-image`;
-          # IfNotPresent prevents Kubernetes from trying to pull it from a registry.
-          image: lildeploy:0.1.0
+          # Bare name; the kustomize images transform injects registry and tag.
+          image: lildeploy
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
