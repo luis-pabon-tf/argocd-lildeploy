@@ -8,6 +8,11 @@ def hello_world() -> dict[str, str]:
     return {"message": "Hello from GitOps! This deploy required zero manual steps."}
 
 
+@app.get("/bye")
+def goodbye_world() -> dict[str, str]:
+    return {"message": "Bye! This should also require no manual steps..."}
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
