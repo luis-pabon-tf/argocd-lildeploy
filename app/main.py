@@ -10,7 +10,7 @@ def hello_world() -> dict[str, str]:
 
 @app.get("/bye")
 def goodbye_world() -> dict[str, str]:
-    return {"message": "Bye! This should also require no manual steps..."}
+    return {"message": "Bye! This should still not require any manual steps..."}
 
 
 @app.get("/health")
