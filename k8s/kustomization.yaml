@@ -10,4 +10,4 @@ images:
   - name: lildeploy
     newName: ghcr.io/luis-pabon-tf/argocd-lildeploy
   - name: ghcr.io/luis-pabon-tf/argocd-lildeploy
-    newTag: 0.1.2
+    newTag: 0.1.3
