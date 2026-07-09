@@ -5,7 +5,7 @@ app = FastAPI(title="argocd-lildeploy")
 
 @app.get("/")
 def hello_world() -> dict[str, str]:
-    return {"message": "Hello from GitOps! This deploy required zero manual steps."}
+    return {"message": "Hello World!"}
 
 
 @app.get("/bye")
